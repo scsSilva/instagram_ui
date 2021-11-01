@@ -27,9 +27,9 @@ class _PostFeedWidgetState extends State<PostFeedWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: widget.height * .93,
+      height: widget.height < 467 ? widget.height : widget.height * .93,
       // color: Colors.green,
-      padding: EdgeInsets.symmetric(horizontal: 10),
+      padding: EdgeInsets.symmetric(horizontal: 5),
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 10),
         child: Column(
@@ -160,6 +160,9 @@ class _PostFeedWidgetState extends State<PostFeedWidget> {
                         ),
                         TextSpan(
                           text: widget.labelPost,
+                          style: TextStyle(
+                            fontWeight: FontWeight.w400,
+                          ),
                         ),
                       ],
                     ),

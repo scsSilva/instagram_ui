@@ -40,10 +40,9 @@ class HomePage extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  // decoration: BoxDecoration(
-                  //   color: Colors.red,
-                  // ),
-                  height: constraints.maxHeight * .16,
+                  height: constraints.maxHeight < 467
+                      ? constraints.maxHeight * .2
+                      : constraints.maxHeight * .16,
                   child: Center(
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10),
